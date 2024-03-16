@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-@mixin verticalCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 li {
   list-style-type: none;
 }

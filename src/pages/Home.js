@@ -1,12 +1,13 @@
 import React from 'react';
-import Products from "../components/Products";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import AllProducts from "../components/AllProducts";
+
 
 const Home = () => {
     return (
         <div className="home">
-            <Navbar />
-            <Products />
+            <Header/>
+            <AllProducts/>
         </div>
     );
 };

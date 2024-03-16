@@ -1,0 +1,45 @@
+.addProduct {
+  padding: 30px;
+
+  form {
+    margin: 50px auto;
+    height: 400px;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "a b c"
+            "d d d"
+            "e f g";
+  }
+
+  input, textarea {
+    margin-bottom: 20px;
+    margin-right: 5px;
+  }
+
+  #name {
+    grid-area: a;
+  }
+
+  #reference {
+    grid-area: b;
+  }
+
+  #img {
+    grid-area: c;
+  }
+
+  #description {
+    grid-area: d;
+  }
+
+  #price {
+    grid-area: e;
+  }
+
+  #quantity {
+    grid-area: f;
+  }
+
+}

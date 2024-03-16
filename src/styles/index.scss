@@ -1,5 +1,7 @@
 @import "./settings";
 @import "./pages/home";
-@import "./components/navbar";
-@import "./components/products";
+@import "pages/addProducts";
+@import "components/header";
+@import "components/allProducts";
 @import "./components/cards";
+@import "./components/addProduct";
