@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import {useCart} from '../model/CartContext';
+import {useCart} from '../models/CartContext';
 
 const Cards = ({product}) => {
+
+    const [isEditing, setIsEditing] = useState(false);
     const [formData, setFormData] = useState({
         name: product.name_product,
         reference: product.ref_product,
@@ -11,7 +13,6 @@ const Cards = ({product}) => {
         price: product.price_product
     });
 
-    const [isEditing, setIsEditing] = useState(false);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -20,12 +21,6 @@ const Cards = ({product}) => {
             [name]: value
         });
     };
-
-    const handleDelete = () => {
-        axios.delete(`http://localhost:8080/product/${product.id_product}`)
-            .then(window.location.reload());
-    };
-
     const handleEdit = () => {
         const data = {
             name_product: formData.name,
@@ -36,24 +31,29 @@ const Cards = ({product}) => {
         };
 
         axios.put(`http://localhost:8080/product/${product.id_product}`, data)
-            .then(window.location.reload());
+            .then(() => window.location.reload());
 
         setIsEditing(false);
+    };
+    const handleDelete = () => {
+        axios.delete(`http://localhost:8080/product/${product.id_product}`)
+            .then(() => window.location.reload());
     };
 
     const {addToCart} = useCart();
 
     const handleAddToCart = () => {
         const productToAdd = {
-            name_product: product.name_product,
-            price_product: product.price_product,
-            ref_product: product.ref_product,
-            desc_product: product.desc_product,
-            img_product: product.img_product,
+            name: product.name_product,
+            reference: product.ref_product,
+            img: product.img_product,
+            description: product.desc_product,
+            price: product.price_product,
             quantity: 1
         };
 
         addToCart(productToAdd);
+        console.log(productToAdd);
     };
 
     return (

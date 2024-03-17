@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Home from "./controller/Home";
-import AddProducts from "./controller/AddProducts";
-import Panier from "./controller/Panier";
+import Home from "./pages/Home";
+import AddProducts from "./pages/AddProducts";
+import Paid from "./pages/Paid";
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
                 <Routes>
                     <Route path="*" element={<Home/>}/>
                     <Route path="addProduct" element={<AddProducts/>}/>
-                    <Route path="panier" element={<Panier/>}/>
+                    <Route path="panier" element={<Paid/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from "../view/Header";
-import AllProducts from "../model/AllProducts";
-import {CartProvider} from "../model/CartContext";
+import Header from "../components/Header";
+import AllProducts from "../models/AllProducts";
+import {CartProvider} from "../models/CartContext";
 
 
 const Home = () => {
