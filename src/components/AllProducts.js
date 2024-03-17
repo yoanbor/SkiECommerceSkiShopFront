@@ -5,6 +5,7 @@ import Cards from "./Cards";
 const AllProducts = () => {
     const [data, setData] = useState([]);
 
+
     useEffect(() => {
         axios.get("http://localhost:8080/products")
             .then((res) => setData(res.data));
