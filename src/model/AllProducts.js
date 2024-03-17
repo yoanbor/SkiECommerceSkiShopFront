@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
-import Cards from "./Cards";
+import Cards from "../view/Cards";
+
 
 const AllProducts = () => {
     const [data, setData] = useState([]);

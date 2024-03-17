@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "../components/Header";
-import AddProduct from "../components/AddProduct";
+import Header from "../view/Header";
+import AddProduct from "../model/AddProduct";
 
 
 const AddProducts = () => {
