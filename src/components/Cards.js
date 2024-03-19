@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import {useCart} from '../models/CartContext';
+import {useCart} from './CartContext';
 
 const Cards = ({product}) => {
 

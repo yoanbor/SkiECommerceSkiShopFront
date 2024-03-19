@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../components/Header";
 import Cart from "../components/Cart";
-import {CartProvider} from "../models/CartContext";
+import {CartProvider} from "../components/CartContext";
 
 const Paid = () => {
     return (
